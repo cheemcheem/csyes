@@ -1,0 +1,84 @@
+{
+  "name": "csyes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "LICENSE",
+  "private": true,
+  "workspaces": [
+    "packages/**"
+  ],
+  "modular": {
+    "type": "root"
+  },
+  "scripts": {
+    "start": "BROWSER=none modular start @csyes/app",
+    "build": "modular build",
+    "test": "modular test",
+    "lint:fix": "modular lint --staged --fix",
+    "prepare": "husky install"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "project": [
+        "./tsconfig.json"
+      ]
+    },
+    "extends": [
+      "modular-app",
+      "plugin:prettier/recommended"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "printWidth": 80,
+    "proseWrap": "always",
+    "importOrder": [
+      "^react$",
+      "<THIRD_PARTY_MODULES>",
+      "^(\\.)/",
+      "^(\\.){2}/",
+      "^(\\.){3}/",
+      "^(\\.){4}/",
+      "^(\\.){5}/",
+      "^[./]"
+    ],
+    "importOrderSortSpecifiers": true
+  },
+  "dependencies": {
+    "@testing-library/dom": "^9.2.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.34",
+    "@types/react-dom": "^18.0.11",
+    "eslint-config-modular-app": "^4.0.0",
+    "modular-scripts": "^4.2.0",
+    "modular-template-app": "^1.2.0",
+    "modular-template-source": "^1.1.0",
+    "prettier": "^2.8.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.8.3"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3"
+  }
+}

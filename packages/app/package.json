@@ -1,0 +1,15 @@
+{
+  "name": "@csyes/app",
+  "private": true,
+  "modular": {
+    "type": "app"
+  },
+  "version": "1.0.0",
+  "dependencies": {
+    "@salt-ds/core": "^1.4.0",
+    "@salt-ds/icons": "^1.1.0",
+    "@salt-ds/lab": "^1.0.0-alpha.4",
+    "@salt-ds/theme": "^1.2.0",
+    "@csyes/shapes": "^1.0.0"
+  }
+}

@@ -1,0 +1,25 @@
+#triangle {
+    --angle: atan(0.5/1);
+    --hypotenuse: calc(50% * 1 / sin(var(--angle)));
+
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    background-color: aqua;
+}
+
+#triangle > div:nth-child(1){
+    width: 100%;
+    height: var(--hypotenuse);
+    background-color: var(--salt-container-primary-background);
+    transform: translateX(-50%) rotate(var(--angle));
+    transform-origin: top right;
+}
+
+#triangle > div:nth-child(2){
+    width: 100%;
+    height: var(--hypotenuse);
+    background-color: var(--salt-container-primary-background);
+    transform: translateY(-100%) translateX(50%) rotate(calc(-1 * var(--angle)));
+    transform-origin: top left;
+}

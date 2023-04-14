@@ -1,0 +1,6 @@
+#circle {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: aqua;
+    border-radius: 50%;
+}
