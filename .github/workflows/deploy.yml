@@ -26,7 +26,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-      PUBLIC_URL: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -40,6 +39,8 @@ jobs:
         run: yarn install
       - name: Build
         run: yarn build
+        env: 
+         PUBLIC_URL: ${{ steps.deployment.outputs.page_url }}
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
