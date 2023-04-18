@@ -40,7 +40,7 @@ jobs:
       - name: Build
         run: yarn build
         env: 
-         PUBLIC_URL: ${{ steps.deployment.outputs.page_url }}
+         PUBLIC_URL: /csyes
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
